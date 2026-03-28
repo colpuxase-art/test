@@ -1,157 +1,139 @@
 <?php
 /**
- * Page d'accueil du thème Shasitter.
+ * Main template file.
  *
- * @package Shasitter
+ * @package ShaSitter_Theme
  */
-
-if ( ! defined( 'ABSPATH' ) ) {
-	exit;
-}
 
 get_header();
 ?>
-<main id="primary" class="site-main">
-	<section class="section hero">
-		<div class="section__inner grid hero-grid">
-			<div class="hero-copy">
-				<span class="quick-reply">🐾 Réponse rapide · En moyenne sous 1h</span>
-				<h1 class="section-title">Une présence douce et fiable pour votre chat, même quand vous êtes loin.</h1>
-				<p>Shana prend soin de votre compagnon à domicile avec une approche attentive, rassurante et premium, pour votre sérénité au quotidien.</p>
-				<div class="actions">
-					<a class="btn btn-primary" href="https://wa.me/33600000000?text=Bonjour%20Shana%2C%20je%20cherche%20une%20cat%20sitter%20pour%20mon%20chat%20%F0%9F%90%B1" target="_blank" rel="noopener noreferrer">💬 WhatsApp</a>
-					<a class="btn btn-secondary" href="https://instagram.com/shasitter" target="_blank" rel="noopener noreferrer">📷 Instagram</a>
+
+<main>
+	<header class="hero section">
+		<div class="container">
+			<div class="hero-card p-4 p-md-5">
+				<div class="row align-items-center g-4">
+					<div class="col-lg-7">
+						<p class="eyebrow mb-2">Cat sitter premium · Genève</p>
+						<h1 class="display-5 mb-3">Je prends soin de votre chat comme du mien. <span class="signature-moon" aria-hidden="true">🌙</span></h1>
+						<p class="lead text-secondary mb-4">
+							Visites à domicile, soins attentifs, nouvelles quotidiennes et approche douce pour rassurer votre compagnon (et vous).
+						</p>
+						<div class="d-flex flex-wrap gap-2">
+							<a class="btn btn-brand btn-lg" href="https://wa.me/41000000000" target="_blank" rel="noreferrer noopener">WhatsApp</a>
+							<a class="btn btn-outline-dark btn-lg" href="https://instagram.com" target="_blank" rel="noreferrer noopener">Instagram</a>
+						</div>
+					</div>
+					<div class="col-lg-5">
+						<div class="soft-card p-4 h-100">
+							<h2 class="h3 mb-3">Pourquoi ShaSitter ?</h2>
+							<ul class="mb-0 ps-3">
+								<li class="mb-2">Approche humaine, calme et bienveillante.</li>
+								<li class="mb-2">Routine respectée selon les besoins de votre chat.</li>
+								<li>Nouvelles quotidiennes avec photos/vidéos.</li>
+							</ul>
+						</div>
+					</div>
 				</div>
 			</div>
-			<div class="image-frame">
-				<!-- MODIFIER ICI -->
-				<img src="https://images.unsplash.com/photo-1573865526739-10659fec78a5?auto=format&fit=crop&w=1200&q=80" alt="Chat détendu sur un coussin confortable">
+		</div>
+	</header>
+
+	<section class="section" id="a-propos">
+		<div class="container">
+			<h2 class="section-title">À propos de Shana</h2>
+			<div class="soft-card p-4 p-md-5">
+				<p class="mb-0">
+					Shana accompagne les familles qui veulent le meilleur pour leur chat pendant leurs absences. Son objectif : une présence fiable, rassurante et chaleureuse.
+					<span class="paw" aria-hidden="true">🐾</span>
+				</p>
 			</div>
 		</div>
 	</section>
 
-	<section id="a-propos" class="section section-alt">
-		<div class="section__inner grid about-grid">
-			<div class="image-frame">
-				<!-- MODIFIER ICI -->
-				<img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=1200&q=80" alt="Shana en train de câliner un chat">
-			</div>
-			<div>
-				<h2 class="section-title">À propos de Shana</h2>
-				<p class="section-lead">Passionnée par les félins, je propose un service de cat sitting élégant et bienveillant. Mon objectif est simple : respecter les habitudes de votre chat, maintenir son confort, et vous tenir informé avec des nouvelles claires à chaque visite.</p>
-				<p>Disponibilité, discrétion, délicatesse : chaque détail compte pour offrir une expérience haut de gamme à votre chat et une tranquillité totale pour vous.</p>
-			</div>
-		</div>
-	</section>
-
-	<section id="services" class="section">
-		<div class="section__inner">
-			<h2 class="section-title">Services pensés pour son bien-être</h2>
-			<p class="section-lead">Des prestations complètes, flexibles et personnalisables selon son âge, son caractère et son rythme.</p>
-			<div class="grid services-grid">
-				<article class="card service-card">
-					<span class="micro-icon" aria-hidden="true">🐾</span>
-					<h3>Visites à domicile</h3>
-					<p>Présence rassurante, repas, eau fraîche, jeu et nettoyage de la litière avec un rituel constant.</p>
-				</article>
-				<article class="card service-card">
-					<span class="micro-icon" aria-hidden="true">🧴</span>
-					<h3>Soins & attention</h3>
-					<p>Brossage, prise de médicaments simples, surveillance du comportement et du confort général.</p>
-				</article>
-				<article class="card service-card">
-					<span class="micro-icon" aria-hidden="true">📸</span>
-					<h3>Nouvelles quotidiennes</h3>
-					<p>Photos, vidéos et message détaillé après chaque passage pour rester connecté à votre chat.</p>
-				</article>
-			</div>
-		</div>
-	</section>
-
-	<section class="section section-alt">
-		<div class="section__inner grid why-grid">
-			<div>
-				<h2 class="section-title">Pourquoi moi ?</h2>
-				<p class="section-lead">Parce que chaque chat est unique. Je m'adapte à son tempérament, qu'il soit joueur, timide ou très indépendant, avec douceur et patience.</p>
-				<ul>
-					<li>🐾 Routine respectée et environnement apaisé</li>
-					<li>🐾 Contact direct WhatsApp avant, pendant et après mission</li>
-					<li>🐾 Service premium humain et transparent</li>
-				</ul>
-			</div>
-			<aside class="card featured-quote" aria-label="Témoignage client mis en avant">
-				<p>“Shana est exceptionnelle : douce, ponctuelle et ultra rassurante. Mon chat l'adore et moi aussi.”</p>
-				<strong>— Claire, Paris</strong>
-			</aside>
-		</div>
-	</section>
-
-	<section id="animaux" class="section">
-		<div class="section__inner">
-			<h2 class="section-title">Les animaux que j'accompagne</h2>
-			<p class="section-lead">Une galerie de compagnons suivis avec attention et tendresse.</p>
-			<div class="grid pets-grid">
-				<article class="card pet-card">
-					<div class="pet-avatar-wrap">
-						<!-- MODIFIER ICI -->
-						<img class="pet-avatar" src="https://images.unsplash.com/photo-1513360371669-4adf3dd7dff8?auto=format&fit=crop&w=500&q=80" alt="Milo chat européen">
+	<section class="section section-soft" id="services">
+		<div class="container">
+			<h2 class="section-title">Services</h2>
+			<div class="row g-3">
+				<div class="col-md-4">
+					<div class="soft-card p-4 h-100">
+						<h3 class="h4">Visites à domicile</h3>
+						<p class="mb-0 text-secondary">Passages ponctuels ou réguliers adaptés au rythme de votre chat.</p>
 					</div>
-					<h3>Milo</h3>
-					<p>Curieux et affectueux, adore les séances de jeu au plumeau.</p>
-					<a class="pet-link" href="https://instagram.com/shasitter" target="_blank" rel="noopener noreferrer">Voir sur Instagram</a>
-				</article>
-				<article class="card pet-card">
-					<div class="pet-avatar-wrap">
-						<!-- MODIFIER ICI -->
-						<img class="pet-avatar" src="https://images.unsplash.com/photo-1511275539165-cc46b1ee89bf?auto=format&fit=crop&w=500&q=80" alt="Nala chat tigré">
+				</div>
+				<div class="col-md-4">
+					<div class="soft-card p-4 h-100">
+						<h3 class="h4">Soins & confort</h3>
+						<p class="mb-0 text-secondary">Nourriture, eau, litière, jeux, câlins et soins légers selon vos consignes.</p>
 					</div>
-					<h3>Nala</h3>
-					<p>Timide au départ, puis très câline une fois la confiance installée.</p>
-					<a class="pet-link" href="https://instagram.com/shasitter" target="_blank" rel="noopener noreferrer">Voir sur Instagram</a>
-				</article>
-				<article class="card pet-card">
-					<div class="pet-avatar-wrap">
-						<!-- MODIFIER ICI -->
-						<img class="pet-avatar" src="https://images.unsplash.com/photo-1519052537078-e6302a4968d4?auto=format&fit=crop&w=500&q=80" alt="Simba chat roux">
+				</div>
+				<div class="col-md-4">
+					<div class="soft-card p-4 h-100">
+						<h3 class="h4">Nouvelles quotidiennes</h3>
+						<p class="mb-0 text-secondary">Compte-rendu journalier avec photos pour une tranquillité totale.</p>
 					</div>
-					<h3>Simba</h3>
-					<p>Très joueur et gourmand, aime les routines bien cadrées.</p>
-					<a class="pet-link" href="https://instagram.com/shasitter" target="_blank" rel="noopener noreferrer">Voir sur Instagram</a>
-				</article>
+				</div>
 			</div>
 		</div>
 	</section>
 
-	<section id="avis" class="section section-alt">
-		<div class="section__inner">
+	<section class="section" id="animaux">
+		<div class="container">
+			<div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
+				<h2 class="section-title mb-0">Les petits protégés</h2>
+				<a href="https://instagram.com" target="_blank" rel="noreferrer noopener" class="btn btn-outline-dark">Voir Instagram</a>
+			</div>
+			<div class="row g-3">
+				<div class="col-md-4">
+					<article class="soft-card p-4 h-100">
+						<div class="animal-avatar mb-3" aria-hidden="true">🐱</div>
+						<h3 class="h4 mb-1">Milo</h3>
+						<p class="text-secondary mb-0">Très joueur, aime les routines du soir et les petites sessions câlins.</p>
+					</article>
+				</div>
+				<div class="col-md-4">
+					<article class="soft-card p-4 h-100">
+						<div class="animal-avatar mb-3" aria-hidden="true">🐈</div>
+						<h3 class="h4 mb-1">Luna</h3>
+						<p class="text-secondary mb-0">Timide au départ, puis très affectueuse après quelques visites.</p>
+					</article>
+				</div>
+				<div class="col-md-4">
+					<article class="soft-card p-4 h-100">
+						<div class="animal-avatar mb-3" aria-hidden="true">🐾</div>
+						<h3 class="h4 mb-1">Nori</h3>
+						<p class="text-secondary mb-0">Curieuse et sensible, besoin d'une présence calme et régulière.</p>
+					</article>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="section section-soft" id="avis">
+		<div class="container">
 			<h2 class="section-title">Avis clients</h2>
-			<p class="section-lead">La confiance est au cœur de chaque visite.</p>
-			<div class="card">
-				<div class="tr-widget" data-id="8050" data-view="badge_left"></div>
-				<script src="https://cdn.trust.reviews/widget/embed.min.js" defer></script>
-				<div class="rating-row">
-					<span class="score">⭐ 5.0 / 5</span>
-					<a class="btn btn-secondary" href="https://trust.reviews" target="_blank" rel="noopener noreferrer">Voir les avis</a>
-				</div>
+			<div class="soft-card p-4 p-md-5">
+				<p class="mb-2"><span class="star" aria-hidden="true">★★★★★</span> 4.9/5 sur Google</p>
+				<p class="text-secondary mb-3">« Shana est adorable, fiable et notre chat est apaisé à chaque absence. »</p>
+				<a class="btn btn-outline-dark" href="#" aria-label="Voir tous les avis Google">Voir tous les avis</a>
+				<p class="small small-note mt-3 mb-0">Intégration TrustReviews prête à connecter ici.</p>
 			</div>
 		</div>
 	</section>
 
 	<section id="contact" class="section">
-		<div class="section__inner grid contact-grid">
-			<div>
-				<h2 class="section-title">Parlons du séjour de votre chat</h2>
-				<p class="section-lead">Pas de formulaire : un message direct et rapide pour organiser sereinement vos besoins.</p>
-			</div>
-			<div class="card">
-				<!-- MODIFIER ICI -->
-				<div class="actions">
-					<a class="btn btn-primary" href="https://wa.me/33600000000?text=Bonjour%20Shana%2C%20je%20souhaite%20organiser%20des%20visites%20pour%20mon%20chat." target="_blank" rel="noopener noreferrer">💬 WhatsApp</a>
-					<a class="btn btn-secondary" href="https://instagram.com/shasitter" target="_blank" rel="noopener noreferrer">📷 Instagram</a>
+		<div class="container">
+			<div class="contact-wrap p-4 p-md-5">
+				<h2 class="section-title text-white">Contact rapide</h2>
+				<p class="mb-4">Un message, une réponse rapide, zéro friction. <span aria-hidden="true">✨</span></p>
+				<div class="d-flex flex-wrap gap-2">
+					<a class="btn btn-light btn-lg" href="https://wa.me/41000000000" target="_blank" rel="noreferrer noopener">WhatsApp direct</a>
+					<a class="btn btn-outline-light btn-lg" href="https://instagram.com" target="_blank" rel="noreferrer noopener">Instagram direct</a>
 				</div>
 			</div>
 		</div>
 	</section>
 </main>
+
 <?php
 get_footer();
