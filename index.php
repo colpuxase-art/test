@@ -1,9 +1,15 @@
-<!DOCTYPE html>
-<html lang="fr">
+<?php
+/**
+ * Main template file for ShaSitter Theme.
+ *
+ * @package ShaSitter_Theme
+ */
+?><!DOCTYPE html>
+<html <?php language_attributes(); ?>>
   <head>
-    <meta charset="utf-8" />
+    <meta charset="<?php bloginfo( 'charset' ); ?>" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>ShaSitter — Cat sitter à Genève</title>
+    <title><?php bloginfo( 'name' ); ?> — Cat sitter à Genève</title>
     <meta
       name="description"
       content="ShaSitter, cat sitter premium à Genève : visites à domicile, soins et nouvelles quotidiennes."
@@ -19,108 +25,12 @@
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Space+Grotesk:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
-
-    <style>
-      :root {
-        --lavender: #b295e6;
-        --lavender-deep: #9f84dc;
-        --cream: #ecd98c;
-        --ink: #090909;
-        --soft-bg: #f8f4ff;
-      }
-
-      body {
-        font-family: "Space Grotesk", sans-serif;
-        color: #222;
-        background: linear-gradient(180deg, #faf8ff, #ffffff 30%, #fffdf5 100%);
-      }
-
-      h1,
-      h2,
-      h3 {
-        font-family: "Cormorant Garamond", serif;
-      }
-
-      .navbar-brand {
-        letter-spacing: 0.5px;
-        font-weight: 700;
-      }
-
-      .signature-moon {
-        color: var(--lavender-deep);
-      }
-
-      .hero {
-        padding: 6rem 0 4rem;
-      }
-
-      .hero-card {
-        border-radius: 24px;
-        border: 1px solid rgba(159, 132, 220, 0.2);
-        background: radial-gradient(circle at top right, rgba(178, 149, 230, 0.28), transparent 55%),
-          #fff;
-        box-shadow: 0 18px 45px rgba(35, 20, 70, 0.09);
-      }
-
-      .btn-brand {
-        background: var(--lavender-deep);
-        border-color: var(--lavender-deep);
-        color: #fff;
-      }
-
-      .btn-brand:hover {
-        background: #876dc6;
-        border-color: #876dc6;
-        color: #fff;
-      }
-
-      .section {
-        padding: 4.5rem 0;
-      }
-
-      .section-soft {
-        background: var(--soft-bg);
-      }
-
-      .soft-card {
-        border: 0;
-        border-radius: 18px;
-        background: #fff;
-        box-shadow: 0 10px 30px rgba(20, 10, 45, 0.07);
-      }
-
-      .animal-avatar {
-        width: 92px;
-        height: 92px;
-        border-radius: 50%;
-        display: grid;
-        place-items: center;
-        background: linear-gradient(145deg, #f4ecff, #fffdf3);
-        font-size: 2rem;
-        border: 1px solid rgba(178, 149, 230, 0.25);
-      }
-
-      .star {
-        color: #e8b63c;
-      }
-
-      .contact-wrap {
-        border-radius: 20px;
-        background: linear-gradient(135deg, #b295e6, #9f84dc);
-        color: #fff;
-      }
-
-      .small-note {
-        opacity: 0.85;
-      }
-
-      .paw {
-        color: var(--lavender-deep);
-      }
-    </style>
+    <link rel="stylesheet" href="<?php echo esc_url( get_stylesheet_uri() ); ?>" />
+    <?php wp_head(); ?>
   </head>
 
-  <body>
+  <body <?php body_class(); ?>>
+    <?php wp_body_open(); ?>
     <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top">
       <div class="container py-2">
         <a class="navbar-brand" href="#">ShaSitter <span class="signature-moon">🌙</span></a>
@@ -255,11 +165,9 @@
     </section>
 
     <footer class="py-4 text-center text-secondary">
-      <div class="container">ShaSitter © <span id="year"></span> · Genève</div>
+      <div class="container">ShaSitter © <?php echo esc_html( gmdate( 'Y' ) ); ?> · Genève</div>
     </footer>
 
-    <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
+    <?php wp_footer(); ?>
   </body>
 </html>
